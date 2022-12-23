@@ -9,8 +9,8 @@ const Stack = createStackNavigator();
 
 
 
-import {AuthContext} from "./components/AuthContext/context";
-import {StackActions} from '@react-navigation/native';
+import { AuthContext } from "./components/AuthContext/context";
+import { StackActions } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -20,43 +20,44 @@ import UserComponent from './components/profile/user';
 import ManagerComponent from './components/profile/manager';
 import QrScannerComponent from './components/profile/qr_scaner';
 import RecoveryPasswordComponent from './components/auth/recovery_password';
+import Traffics from './components/profile/Traffics';
 
 
 
 
 
 function RegisterScreen({ navigation }) {
-  return (
-      <RegisterComponent navigation={navigation}  />
-  );
+    return (
+        <RegisterComponent navigation={navigation} />
+    );
 }
 
 function LoginScreen({ navigation }) {
     return (
-        <LoginComponent navigation={navigation}  />
+        <LoginComponent navigation={navigation} />
     );
 }
 
 function UserScreen({ navigation }) {
-  return (
-      <UserComponent navigation={navigation}  />
-  );
+    return (
+        <UserComponent navigation={navigation} />
+    );
 }
 function ManagerScreen({ navigation }) {
-  return (
-      <ManagerComponent navigation={navigation}  />
-  );
-}
-
-function QrScannerScreen({  navigation }) {
     return (
-        <QrScannerComponent  navigation={navigation}  />
+        <ManagerComponent navigation={navigation} />
     );
 }
 
-function RecoveryPasswordScreen({  navigation }) {
+function QrScannerScreen({ navigation }) {
     return (
-        <RecoveryPasswordComponent  navigation={navigation}  />
+        <QrScannerComponent navigation={navigation} />
+    );
+}
+
+function RecoveryPasswordScreen({ navigation }) {
+    return (
+        <RecoveryPasswordComponent navigation={navigation} />
     );
 }
 
@@ -125,7 +126,7 @@ export default function App() {
             } catch (e) {
                 console.log(e);
             }
-            dispatch({type: 'LOGIN',  token: userToken});
+            dispatch({ type: 'LOGIN', token: userToken });
             callback();
         },
         signOut: async (callback) => {
@@ -137,7 +138,7 @@ export default function App() {
             } catch (e) {
                 console.log(e);
             }
-            dispatch({type: 'LOGOUT'});
+            dispatch({ type: 'LOGOUT' });
             callback();
         },
         signUp: () => {
@@ -161,7 +162,7 @@ export default function App() {
             } catch (e) {
                 console.log(e);
             }
-            dispatch({type: 'RETRIEVE_TOKEN', token: userToken});
+            dispatch({ type: 'RETRIEVE_TOKEN', token: userToken });
         }, 1000);
     }, []);
     return (
@@ -181,23 +182,29 @@ export default function App() {
 
 
                             <Stack.Screen name="User" component={UserScreen}
-                                          options={({route}) => ({
-                                              tabBarButton: () => null,
-                                              tabBarStyle: {display: 'none'},
-                                          })}
+                                options={({ route }) => ({
+                                    tabBarButton: () => null,
+                                    tabBarStyle: { display: 'none' },
+                                })}
                             />
                             <Stack.Screen name="Manager" component={ManagerScreen}
-                                          options={({route}) => ({
-                                              tabBarButton: () => null,
-                                              tabBarStyle: {display: 'none'},
-                                          })}
+                                options={({ route }) => ({
+                                    tabBarButton: () => null,
+                                    tabBarStyle: { display: 'none' },
+                                })}
                             />
 
                             <Stack.Screen name="QrScanner" component={QrScannerScreen}
-                                          options={({route}) => ({
-                                              tabBarButton: () => null,
-                                              tabBarStyle: {display: 'none'},
-                                          })}
+                                options={({ route }) => ({
+                                    tabBarButton: () => null,
+                                    tabBarStyle: { display: 'none' },
+                                })}
+                            />
+                            <Stack.Screen name='Traffics' component={Traffics}
+                                options={({ route }) => ({
+                                    tabBarButton: () => null,
+                                    tabBarStyle: { display: 'none' },
+                                })}
                             />
 
                         </Stack.Navigator>
@@ -216,27 +223,27 @@ export default function App() {
 
 
                         <Stack.Screen name="Login" component={LoginScreen}
-                                      options={({route}) => ({
-                                          tabBarButton: () => null,
-                                          tabBarStyle: {display: 'none'},
-                                      })}
+                            options={({ route }) => ({
+                                tabBarButton: () => null,
+                                tabBarStyle: { display: 'none' },
+                            })}
                         />
 
                         <Stack.Screen name="Register" component={RegisterScreen}
-                                      options={({route}) => ({
-                                          tabBarButton: () => null,
-                                          tabBarStyle: {display: 'none'},
-                                      })}
+                            options={({ route }) => ({
+                                tabBarButton: () => null,
+                                tabBarStyle: { display: 'none' },
+                            })}
                         />
 
 
 
 
                         <Stack.Screen name="RecoveryPassword" component={RecoveryPasswordScreen}
-                                      options={({route}) => ({
-                                          tabBarButton: () => null,
-                                          tabBarStyle: {display: 'none'},
-                                      })}
+                            options={({ route }) => ({
+                                tabBarButton: () => null,
+                                tabBarStyle: { display: 'none' },
+                            })}
                         />
 
 
@@ -252,12 +259,12 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 
 
 

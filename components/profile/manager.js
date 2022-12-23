@@ -213,7 +213,7 @@ export default class App extends Component {
                     </TouchableOpacity>
                     <View style={styles.header_img_box}>
                         {/*<Image style={styles.header_child_img} source={require('../../assets/images/logo.png')}/>*/}
-                        <Image style={styles.header_child_img} source={require('../../assets/images/logo2.png')}/>
+                        <Image style={styles.header_child_img} source={require('../../assets/images/logo3.png')}/>
                     </View>
 
                 </View>
@@ -315,17 +315,19 @@ const styles = StyleSheet.create({
 
     header_img_box: {
         width: '100%',
-        maxWidth: 256,
-        height: 227,
+        // maxWidth: 256,
+        // height: 227,
         alignItems: 'center',
         alignSelf: 'center',
         justifyContent: 'center',
 
     },
     header_child_img: {
-        width: '100%',
-        height: '100%',
+        width: 280,
+        height: 143,
         resizeMode: 'cover',
+        alignSelf:'center',
+        marginBottom:30
     },
     login_wrapper: {
         width: '100%',
