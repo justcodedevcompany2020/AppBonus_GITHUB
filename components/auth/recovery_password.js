@@ -811,9 +811,7 @@ export default class App extends Component {
 
         return (
             <SafeAreaView style={styles.container} >
-
                 <StatusBar style="dark" />
-
                 <View style={styles.recovery_account_header}>
                     <View style={styles.back_to_sign_in_btn_wrapper}>
                         <TouchableOpacity style={styles.back_to_login} onPress={() => this.redirectToLogin()}>
