@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Bubbles discount club",
-    "slug": "app_bonus",
+    "slug": "bubbles_discount_club",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.JustCode.app_bonus",
+      "package": "com.JustCode.bubbles_discount_club",
       "versionCode": 1,
       "permissions": [
         "CAMERA"
@@ -33,11 +33,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "69892369-4673-4f0d-a4a4-cc9690677d0f"
-      }
     }
+
   }
 }
